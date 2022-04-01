@@ -8,7 +8,55 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel>
+        
+        <ListBox
+            Name="listBox"
+            Width="100"
+            Margin="40"
+            SelectionChanged="listBox_SelectionChanged">
+            <ListBoxItem>1</ListBoxItem>
+            <ListBoxItem>2</ListBoxItem>
+            <ListBoxItem>3</ListBoxItem>
+            <ListBoxItem>4</ListBoxItem>
+            <ListBoxItem>5</ListBoxItem>
+        </ListBox>
 
-    </Grid>
+        <ComboBox
+            Name="comboBox"
+            RelativePanel.RightOf="listBox"
+            Width="100"
+            Margin="40"
+            SelectionChanged="comboBox_SelectionChanged">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock
+            Name="textBlock1"
+            Width="100"
+            RelativePanel.Below="listBox"
+            Margin="40, 0, 0, 0">
+        </TextBlock>
+
+        <TextBlock
+            Name="textBlock2"
+            Width="100"
+            RelativePanel.RightOf="textBlock1"
+            RelativePanel.AlignVerticalCenterWith="textBlock1"
+            Margin="80, 0, 0, 0">
+        </TextBlock>
+
+        <TextBlock
+            Name="textBlock3"
+            Width="100"
+            RelativePanel.Below="textBlock1"
+            Margin="40, 80, 0, 0">
+                Yhteensä 
+        </TextBlock>
+    
+    </RelativePanel>
 </Page>

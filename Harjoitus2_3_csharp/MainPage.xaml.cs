@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,25 @@ namespace Harjoitus2_3_csharp
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            String selectedValue1 = ((ListBoxItem)listBox.SelectedItem).Content.ToString();
+            Debug.WriteLine(selectedValue1);
+            int num1 = Convert.ToInt16(selectedValue1);
+            String value = num1.ToString();
+            textBlock1.Text = value;
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            String selectedValue2 = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
+            Debug.WriteLine(selectedValue2);
+ 
+            int num2 = Convert.ToInt16(selectedValue2);
+            String value = num2.ToString();
+            textBlock2.Text = value;
         }
     }
 }
